@@ -9,4 +9,3 @@
 import UIKit
 
 protocol Identifiable {}
-extension EOSBaseCell: Identifiable {}

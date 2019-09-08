@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EOSBaseCell: UITableViewCell {
+class EOSBaseCell: UITableViewCell, Identifiable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
