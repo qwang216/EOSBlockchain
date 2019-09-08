@@ -25,6 +25,7 @@ class EOSBlockListController: UIViewController {
 
     func setupTableView() {
         tableview.fillToSuperview()
+        tableview.register(EOSBlockCell.self)
         tableview.dataSource = self
         tableview.delegate = self
     }
@@ -38,7 +39,10 @@ extension EOSBlockListController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueCell(indexPath: indexPath) as EOSBlockCell
+        guard let item = viewModel?.blockItem(indexPath.row) else { return UITableViewCell() }
+        cell.configCell(item)
+        return cell
     }
 
 }
