@@ -33,7 +33,7 @@ class EOSBlockListViewModel: EOSBlockListViewable {
     init(eosManager: EOSManagerable) {
         self.eosManager = eosManager
     }
-    
+
     func fetchMostRecentBlocks(_ count: Int) {
         delegate?.loading(state: .start)
         eosManager.getRecentBlockNum { [weak self] (result) in
@@ -54,5 +54,5 @@ class EOSBlockListViewModel: EOSBlockListViewable {
             }
         }
     }
-    
+
 }
