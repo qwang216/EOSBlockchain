@@ -13,6 +13,13 @@
 		D4BD0E2823248031008B9CE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4BD0E2623248031008B9CE6 /* LaunchScreen.storyboard */; };
 		D4BD0E3323248031008B9CE6 /* EOSBlockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E3223248031008B9CE6 /* EOSBlockTests.swift */; };
 		D4BD0E3E23248031008B9CE6 /* EOSBlockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E3D23248031008B9CE6 /* EOSBlockUITests.swift */; };
+		D4BD0E4D23248379008B9CE6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E4C23248379008B9CE6 /* UIView+Extensions.swift */; };
+		D4BD0E50232485B9008B9CE6 /* EOSBlockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E4F232485B9008B9CE6 /* EOSBlockListViewModel.swift */; };
+		D4BD0E532324A523008B9CE6 /* LoadingStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E522324A523008B9CE6 /* LoadingStates.swift */; };
+		D4BD0E552324AB11008B9CE6 /* EOSManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */; };
+		D4BD0E572324AC2B008B9CE6 /* EOSListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E562324AC2B008B9CE6 /* EOSListProtocols.swift */; };
+		D4BD0E5A2324ACA9008B9CE6 /* EOSManagerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */; };
+		D4BD0E5C2324B6D4008B9CE6 /* EOSActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E5B2324B6D4008B9CE6 /* EOSActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		D4BD0E3923248031008B9CE6 /* EOSBlockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EOSBlockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4BD0E3D23248031008B9CE6 /* EOSBlockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSBlockUITests.swift; sourceTree = "<group>"; };
 		D4BD0E3F23248031008B9CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4BD0E4C23248379008B9CE6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D4BD0E4F232485B9008B9CE6 /* EOSBlockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSBlockListViewModel.swift; sourceTree = "<group>"; };
+		D4BD0E522324A523008B9CE6 /* LoadingStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStates.swift; sourceTree = "<group>"; };
+		D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSManagerError.swift; sourceTree = "<group>"; };
+		D4BD0E562324AC2B008B9CE6 /* EOSListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSListProtocols.swift; sourceTree = "<group>"; };
+		D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSManagerable.swift; sourceTree = "<group>"; };
+		D4BD0E5B2324B6D4008B9CE6 /* EOSActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				D4BD0E1D23248030008B9CE6 /* AppDelegate.swift */,
-				D4BD0E1F23248030008B9CE6 /* EOSBlockListController.swift */,
+				D4BD0E522324A523008B9CE6 /* LoadingStates.swift */,
+				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
+				D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */,
+				D4BD0E51232485C0008B9CE6 /* View Models */,
+				D4BD0E4B23248355008B9CE6 /* Controllers */,
+				D4BD0E4E23248387008B9CE6 /* Extensions */,
 				D4BD0E2423248031008B9CE6 /* Assets.xcassets */,
 				D4BD0E2623248031008B9CE6 /* LaunchScreen.storyboard */,
 				D4BD0E2923248031008B9CE6 /* Info.plist */,
@@ -120,6 +139,40 @@
 				D4BD0E3F23248031008B9CE6 /* Info.plist */,
 			);
 			path = EOSBlockUITests;
+			sourceTree = "<group>";
+		};
+		D4BD0E4B23248355008B9CE6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E1F23248030008B9CE6 /* EOSBlockListController.swift */,
+				D4BD0E5B2324B6D4008B9CE6 /* EOSActivityView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4BD0E4E23248387008B9CE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E4C23248379008B9CE6 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4BD0E51232485C0008B9CE6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E582324AC40008B9CE6 /* Protocols */,
+				D4BD0E4F232485B9008B9CE6 /* EOSBlockListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		D4BD0E582324AC40008B9CE6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E562324AC2B008B9CE6 /* EOSListProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4BD0E5C2324B6D4008B9CE6 /* EOSActivityView.swift in Sources */,
+				D4BD0E552324AB11008B9CE6 /* EOSManagerError.swift in Sources */,
+				D4BD0E50232485B9008B9CE6 /* EOSBlockListViewModel.swift in Sources */,
+				D4BD0E4D23248379008B9CE6 /* UIView+Extensions.swift in Sources */,
+				D4BD0E532324A523008B9CE6 /* LoadingStates.swift in Sources */,
 				D4BD0E2023248030008B9CE6 /* EOSBlockListController.swift in Sources */,
+				D4BD0E5A2324ACA9008B9CE6 /* EOSManagerable.swift in Sources */,
+				D4BD0E572324AC2B008B9CE6 /* EOSListProtocols.swift in Sources */,
 				D4BD0E1E23248030008B9CE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
