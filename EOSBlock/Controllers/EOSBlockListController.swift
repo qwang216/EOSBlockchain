@@ -69,8 +69,7 @@ extension EOSBlockListController: EOSBlockListViewModelDelegate {
         case .stop(status: let status):
             activityIndicator.stopAnimating()
             guard case let .failure(err: err) = status else { return }
-            print(err.localizedDescription)
-            print(err.failureReason!)
+            showAlert(err)
         }
     }
 

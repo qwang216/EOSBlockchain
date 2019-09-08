@@ -13,7 +13,7 @@ enum LoadingStatus<T> {
     case failure(err: T)
 }
 
-enum LoadingState<T: Error> {
+enum LoadingState<T: LocalizedError> {
     case start
     case stop(status: LoadingStatus<T>)
 }

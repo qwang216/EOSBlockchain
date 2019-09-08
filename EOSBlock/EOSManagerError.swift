@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum EOSManagerError: Error {
+enum EOSManagerError {
     case failedFetchRecentBlock
 }
 

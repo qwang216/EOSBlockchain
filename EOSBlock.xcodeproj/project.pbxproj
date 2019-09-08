@@ -25,6 +25,7 @@
 		D4BD0E642324C263008B9CE6 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E632324C263008B9CE6 /* Identifiable.swift */; };
 		D4BD0E672324C29F008B9CE6 /* ReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E662324C29F008B9CE6 /* ReuseableView.swift */; };
 		D4BD0E692324C36E008B9CE6 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */; };
+		D4BD0E6B2324C92B008B9CE6 /* UIViewControllers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D4BD0E632324C263008B9CE6 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		D4BD0E662324C29F008B9CE6 /* ReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableView.swift; sourceTree = "<group>"; };
 		D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				D4BD0E4C23248379008B9CE6 /* UIView+Extensions.swift */,
 				D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */,
+				D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				D4BD0E4D23248379008B9CE6 /* UIView+Extensions.swift in Sources */,
 				D4BD0E532324A523008B9CE6 /* LoadingStates.swift in Sources */,
 				D4BD0E612324C156008B9CE6 /* EOSBaseCell.swift in Sources */,
+				D4BD0E6B2324C92B008B9CE6 /* UIViewControllers+Extensions.swift in Sources */,
 				D4BD0E672324C29F008B9CE6 /* ReuseableView.swift in Sources */,
 				D4BD0E2023248030008B9CE6 /* EOSBlockListController.swift in Sources */,
 				D4BD0E5A2324ACA9008B9CE6 /* EOSManagerable.swift in Sources */,
