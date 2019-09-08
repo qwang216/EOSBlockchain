@@ -125,8 +125,6 @@
 			children = (
 				D4BD0E1D23248030008B9CE6 /* AppDelegate.swift */,
 				D4BD0E522324A523008B9CE6 /* LoadingStates.swift */,
-				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
-				D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */,
 				D4BD0E6F2324D375008B9CE6 /* Networking */,
 				D4BD0E51232485C0008B9CE6 /* View Models */,
 				D4BD0E5F2324BFE4008B9CE6 /* Views */,
@@ -232,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				D4BD0E702324D418008B9CE6 /* Mock Objects */,
+				D4BD0E712324D6D9008B9CE6 /* Errors */,
+				D4BD0E722324D6E8008B9CE6 /* Protocols */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -242,6 +242,22 @@
 				D4BD0E6D2324D36E008B9CE6 /* Mock_EOSManager.swift */,
 			);
 			path = "Mock Objects";
+			sourceTree = "<group>";
+		};
+		D4BD0E712324D6D9008B9CE6 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		D4BD0E722324D6E8008B9CE6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
