@@ -9,3 +9,4 @@
 import UIKit
 
 protocol Identifiable {}
+extension UITableViewCell: Identifiable {}
