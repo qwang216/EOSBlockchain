@@ -21,6 +21,7 @@ class EOSBlockListController: UIViewController {
         activityIndicator.centerSuperview()
         setupTableView()
         viewModel?.delegate = self
+        viewModel?.fetchMostRecentBlocks(20)
     }
 
     func setupTableView() {
@@ -50,6 +51,7 @@ extension EOSBlockListController: UITableViewDataSource {
 extension EOSBlockListController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableview.deselectRow(at: indexPath, animated: true)
         guard let selectedBlock = viewModel?.blockItem(indexPath.row) else { return }
         print(selectedBlock)
     }

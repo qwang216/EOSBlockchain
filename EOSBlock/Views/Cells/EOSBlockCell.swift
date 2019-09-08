@@ -20,7 +20,7 @@ class EOSBlockCell: EOSBaseCell, ReusesableView {
     override func setupView() {
         super.setupView()
         contentView.addSubview(blockLabel)
-        blockLabel.fillToSuperview()
+        blockLabel.fillToSuperview(padding: .init(top: 10, left: 10, bottom: 10, right: 10))
     }
 
     func configCell(_ item: String) {

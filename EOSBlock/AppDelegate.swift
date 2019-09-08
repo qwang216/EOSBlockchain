@@ -17,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let navigationController = UINavigationController(rootViewController: EOSBlockListController())
+
+        let rootVC = EOSBlockListController()
+        let manager = Mock_EOSManager()
+        let vm = EOSBlockListViewModel(eosManager: manager)
+        rootVC.viewModel = vm
+        let navigationController = UINavigationController(rootViewController: rootVC)
+
         window?.rootViewController = navigationController
         return true
     }

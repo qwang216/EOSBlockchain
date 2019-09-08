@@ -26,6 +26,7 @@
 		D4BD0E672324C29F008B9CE6 /* ReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E662324C29F008B9CE6 /* ReuseableView.swift */; };
 		D4BD0E692324C36E008B9CE6 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */; };
 		D4BD0E6B2324C92B008B9CE6 /* UIViewControllers+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */; };
+		D4BD0E6E2324D36E008B9CE6 /* Mock_EOSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E6D2324D36E008B9CE6 /* Mock_EOSManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D4BD0E662324C29F008B9CE6 /* ReuseableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableView.swift; sourceTree = "<group>"; };
 		D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllers+Extensions.swift"; sourceTree = "<group>"; };
+		D4BD0E6D2324D36E008B9CE6 /* Mock_EOSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock_EOSManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				D4BD0E522324A523008B9CE6 /* LoadingStates.swift */,
 				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
 				D4BD0E592324ACA9008B9CE6 /* EOSManagerable.swift */,
+				D4BD0E6F2324D375008B9CE6 /* Networking */,
 				D4BD0E51232485C0008B9CE6 /* View Models */,
 				D4BD0E5F2324BFE4008B9CE6 /* Views */,
 				D4BD0E4B23248355008B9CE6 /* Controllers */,
@@ -158,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				D4BD0E1F23248030008B9CE6 /* EOSBlockListController.swift */,
-				D4BD0E5B2324B6D4008B9CE6 /* EOSActivityView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,7 +197,8 @@
 			children = (
 				D4BD0E652324C267008B9CE6 /* Protocols */,
 				D4BD0E622324C16E008B9CE6 /* Base Views */,
-				D4BD0E5D2324BFDF008B9CE6 /* EOSBlockCell.swift */,
+				D4BD0E6C2324D15C008B9CE6 /* Cells */,
+				D4BD0E5B2324B6D4008B9CE6 /* EOSActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,30 @@
 				D4BD0E662324C29F008B9CE6 /* ReuseableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D4BD0E6C2324D15C008B9CE6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E5D2324BFDF008B9CE6 /* EOSBlockCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D4BD0E6F2324D375008B9CE6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E702324D418008B9CE6 /* Mock Objects */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D4BD0E702324D418008B9CE6 /* Mock Objects */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E6D2324D36E008B9CE6 /* Mock_EOSManager.swift */,
+			);
+			path = "Mock Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +385,7 @@
 				D4BD0E6B2324C92B008B9CE6 /* UIViewControllers+Extensions.swift in Sources */,
 				D4BD0E672324C29F008B9CE6 /* ReuseableView.swift in Sources */,
 				D4BD0E2023248030008B9CE6 /* EOSBlockListController.swift in Sources */,
+				D4BD0E6E2324D36E008B9CE6 /* Mock_EOSManager.swift in Sources */,
 				D4BD0E5A2324ACA9008B9CE6 /* EOSManagerable.swift in Sources */,
 				D4BD0E5E2324BFE0008B9CE6 /* EOSBlockCell.swift in Sources */,
 				D4BD0E572324AC2B008B9CE6 /* EOSListProtocols.swift in Sources */,
