@@ -20,7 +20,6 @@ class EOSBlockListController: UIViewController {
         view.addSubviews(tableview, activityIndicator)
         activityIndicator.centerSuperview()
         setupTableView()
-        viewModel?.delegate = self
         viewModel?.fetchMostRecentBlocks(20)
     }
 
