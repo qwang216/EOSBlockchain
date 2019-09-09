@@ -16,7 +16,7 @@ class EOSBlockListViewModel: EOSBlockListViewable {
     private var blocks = [Int]()
     private let eosManager: EOSManagerable
 
-    weak var delegate: EOSBlockListViewModelDelegate?
+    weak var delegate: EOSViewModelDelegate?
 
     var blockCounts: Int {
         return blocks.count
@@ -26,8 +26,8 @@ class EOSBlockListViewModel: EOSBlockListViewable {
         return blocks.count > 0
     }
 
-    func blockItem(_ index: Int) -> String {
-        return "Block Numer: \(blocks[index])"
+    func blockItem(_ index: Int) -> Int {
+        return blocks[index]
     }
 
     init(eosManager: EOSManagerable) {

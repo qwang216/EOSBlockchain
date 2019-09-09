@@ -8,6 +8,9 @@
 
 import UIKit
 
+// default lazy load
+let appSession = AppSession()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         let rootVC = EOSBlockListController()
-        let manager = Mock_EOSManager()
-        let vm = EOSBlockListViewModel(eosManager: manager)
+        let vm = EOSBlockListViewModel(eosManager: appSession.eosManager)
         rootVC.viewModel = vm
         let navigationController = UINavigationController(rootViewController: rootVC)
 

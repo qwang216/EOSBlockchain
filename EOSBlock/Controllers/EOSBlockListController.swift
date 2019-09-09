@@ -53,12 +53,18 @@ extension EOSBlockListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableview.deselectRow(at: indexPath, animated: true)
         guard let selectedBlock = viewModel?.blockItem(indexPath.row) else { return }
-        print(selectedBlock)
+        // TODO: Implement Coordinator Pattern
+        let vm = EOSBlockDetailViewModel(manager: appSession.eosManager, blockNum: selectedBlock)
+        let detailVC = EOSBlockDetailController()
+        detailVC.viewModel = vm
+        vm.delegate = detailVC
+        navigationController?.pushViewController(detailVC, animated: true)
+        // TODO: END
     }
 
 }
 
-extension EOSBlockListController: EOSBlockListViewModelDelegate {
+extension EOSBlockListController: EOSViewModelDelegate {
 
     func viewModelUpdated() {
         tableview.reloadData()

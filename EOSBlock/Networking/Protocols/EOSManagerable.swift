@@ -12,4 +12,5 @@ typealias EOSResult<T> = (Result<T, EOSManagerError>) -> Void
 
 protocol EOSManagerable {
     func getRecentBlockNum(completion: @escaping EOSResult<Int>)
+    func getDataOnBlock(number: Int, completion: @escaping EOSResult<EOSBlockObj>)
 }

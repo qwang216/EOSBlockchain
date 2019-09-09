@@ -23,8 +23,8 @@ class EOSBlockCell: EOSBaseCell, ReusesableView {
         blockLabel.fillToSuperview(padding: .init(top: 10, left: 10, bottom: 10, right: 10))
     }
 
-    func configCell(_ item: String) {
-        blockLabel.text = item
+    func configCell(_ item: Int) {
+        blockLabel.text = "Block Number: \(item)"
     }
 
 }

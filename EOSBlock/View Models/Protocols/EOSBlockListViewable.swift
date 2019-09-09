@@ -8,16 +8,11 @@
 
 import Foundation
 
-protocol EOSBlockListViewModelDelegate: class {
-    func viewModelUpdated()
-    func loading(state: LoadingState<EOSManagerError>)
-}
-
 protocol EOSBlockListViewable {
-    var delegate: EOSBlockListViewModelDelegate? { get set }
+    var delegate: EOSViewModelDelegate? { get set }
     var blockCounts: Int { get }
     var title: String { get }
     var shouldDisplayItems: Bool { get }
     func fetchMostRecentBlocks(_ count: Int)
-    func blockItem(_ index: Int) -> String
+    func blockItem(_ index: Int) -> Int
 }
