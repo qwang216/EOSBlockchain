@@ -14,7 +14,7 @@ extension UIViewController {
         showAlert(title, msg: error.localizedDescription)
     }
 
-    func showAlert(_ title: String, msg: String = "Something went wrong") {
+    func showAlert(_ title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
         alert.addAction(action)

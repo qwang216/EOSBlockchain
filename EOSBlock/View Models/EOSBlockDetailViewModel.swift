@@ -38,7 +38,7 @@ class EOSBlockDetailViewModel: EOSDetailViewable {
     }
 
     var blockJSON: String {
-        guard let block = eosBlock else { return "no block" }
+        guard let block = eosBlock else { return "" }
         return prettyPrintJSON(block.json)
     }
 

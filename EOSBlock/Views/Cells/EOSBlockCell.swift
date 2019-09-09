@@ -12,7 +12,7 @@ class EOSBlockCell: EOSBaseCell, ReusesableView {
 
     let blockLabel: UILabel = {
         let lb = UILabel(frame: .zero)
-        lb.text = "Block Number 12345"
+        lb.text = "Block Number: 12345"
         lb.textAlignment = .left
         return lb
     }()
