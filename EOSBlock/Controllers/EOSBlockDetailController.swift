@@ -39,7 +39,10 @@ class EOSBlockDetailController: UIViewController {
         return tv
     }()
 
+    let toggle = UISwitch(frame: .zero)
+    let scrollView = UIScrollView()
     let activityIndicator = EOSActivityView(frame: .zero)
+
     var viewModel: EOSDetailViewable?
 
     override func viewDidLoad() {
@@ -57,25 +60,43 @@ class EOSBlockDetailController: UIViewController {
     }
 
     func setupView() {
-
-        let scrollView = UIScrollView()
         view.addSubviews(scrollView, activityIndicator)
-        activityIndicator.centerSuperview()
         scrollView.fillToSuperview()
+        activityIndicator.centerSuperview()
+        setupVerticleStackView()
+    }
 
-        let vStack = UIStackView(arrangedSubviews: [producerLabel, signatureLabel, txnCountLabel, textView])
+    private func setupVerticleStackView() {
+        let toggleStack = toggleStackView()
+        let vStack = UIStackView(arrangedSubviews: [producerLabel, signatureLabel, txnCountLabel, toggleStack, textView])
+        scrollView.addSubview(vStack)
         vStack.axis = .vertical
-        vStack.alignment = .leading
+        vStack.alignment = .fill
         vStack.distribution = .fillProportionally
         vStack.spacing = 5
-        scrollView.addSubview(vStack)
         vStack.fillToSuperview(padding: .init(top: 20, left: 20, bottom: 20, right: 20))
         vStack.setAnchor(width: scrollView.widthAnchor, padding: .init(width: 40, height: 0))
+    }
+
+    private func toggleStackView() -> UIStackView {
+        let toggleLabel = UILabel()
+        toggleLabel.text = "Show Raw JSON:"
+        textView.isHidden = !toggle.isOn
+        toggle.addTarget(self, action: #selector(handleToggleAction), for: .valueChanged)
+        let toggleStackView = UIStackView(arrangedSubviews: [toggleLabel ,toggle])
+        toggleStackView.axis = .horizontal
+        toggleStackView.distribution = .equalCentering
+        return toggleStackView
+    }
+
+    @IBAction func handleToggleAction(toggle: UISwitch) {
+        textView.isHidden = !toggle.isOn
     }
 
 }
 
 extension EOSBlockDetailController: EOSViewModelDelegate {
+
     func viewModelUpdated() {
         updateView()
     }
@@ -90,6 +111,5 @@ extension EOSBlockDetailController: EOSViewModelDelegate {
             showAlert(err)
         }
     }
-
 
 }

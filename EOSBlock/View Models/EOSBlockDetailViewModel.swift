@@ -38,9 +38,21 @@ class EOSBlockDetailViewModel: EOSDetailViewable {
     }
 
     var blockJSON: String {
-        guard let _ = eosBlock else { return "" }
-        // TODO: fix me
-        return "JSON goes HERE!!"
+        guard let block = eosBlock else { return "no block" }
+        return prettyPrintJSON(block.json)
+    }
+
+    private func prettyPrintJSON(_ json: JSON) -> String {
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            guard let prettyJSON = String(data: jsonData, encoding: .utf8) else {
+                return "Unable to pretty print JSON"
+            }
+            return prettyJSON
+        } catch {
+            return "JSON Seralization Failed Error: \(error.localizedDescription)"
+        }
+
     }
 
     func fetchBlockDetail() {
