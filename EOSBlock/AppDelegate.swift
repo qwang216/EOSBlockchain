@@ -8,7 +8,6 @@
 
 import UIKit
 
-// default lazy load
 let appSession = AppSession()
 
 @UIApplicationMain

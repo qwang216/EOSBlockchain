@@ -8,12 +8,6 @@
 
 import Foundation
 
-typealias JSON = [String: Any]
-
-enum SerializationError: Error {
-    case missing(String)
-}
-
 struct EOSBlockObj {
     let producer: String
     let producerSignature: String

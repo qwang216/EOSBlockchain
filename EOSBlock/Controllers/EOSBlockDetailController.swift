@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EOSBlockDetailController: UIViewController {
+class EOSBlockDetailController: UIViewController, LoaderableView {
 
     let producerLabel: UILabel = {
         let lb = UILabel()
@@ -99,17 +99,6 @@ extension EOSBlockDetailController: EOSViewModelDelegate {
 
     func viewModelUpdated() {
         updateView()
-    }
-
-    func loading(state: LoadingState<EOSManagerError>) {
-        switch state {
-        case .start:
-            activityIndicator.startAnimating()
-        case .stop(status: let status):
-            activityIndicator.stopAnimating()
-            guard case let .failure(err: err) = status else { return }
-            showAlert(err)
-        }
     }
 
 }

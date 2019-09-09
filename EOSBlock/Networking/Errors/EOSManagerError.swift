@@ -11,15 +11,18 @@ import Foundation
 enum EOSManagerError {
     case failedFetchRecentBlock
     case failedFetchBlockDetail
+    case onError(Error)
 }
 
-extension EOSManagerError: LocalizedError {
-    var failureReason: String? {
+extension EOSManagerError: Error {
+    var localizedDescription: String {
         switch self {
         case .failedFetchRecentBlock:
             return "Unable To Fetch Recent Blocks"
         case .failedFetchBlockDetail:
             return "Failed Fetching Block Detail"
+        case .onError(let err):
+            return err.localizedDescription
         }
     }
 }

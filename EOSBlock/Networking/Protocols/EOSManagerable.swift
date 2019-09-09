@@ -8,9 +8,7 @@
 
 import Foundation
 
-typealias EOSResult<T> = (Result<T, EOSManagerError>) -> Void
-
 protocol EOSManagerable {
-    func getRecentBlockNum(completion: @escaping EOSResult<Int>)
-    func getDataOnBlock(number: Int, completion: @escaping EOSResult<EOSBlockObj>)
+    func getRecentBlockNum(completion: @escaping EOSResultClosure<Int, EOSManagerError>)
+    func getDataOnBlock(number: Int, completion: @escaping EOSResultClosure<EOSBlockObj, EOSManagerError>)
 }

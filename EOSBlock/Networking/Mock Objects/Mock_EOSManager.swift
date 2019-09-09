@@ -12,7 +12,7 @@ class Mock_EOSManager: EOSManagerable {
 
     var isSuccess: Bool = true
 
-    func getDataOnBlock(number: Int, completion: @escaping EOSResult<EOSBlockObj>) {
+    func getDataOnBlock(number: Int, completion: @escaping EOSResultClosure<EOSBlockObj, EOSManagerError>) {
 
         guard isSuccess else {
             completion(.failure(.failedFetchBlockDetail))
@@ -36,12 +36,12 @@ class Mock_EOSManager: EOSManagerable {
             completion(.success(block))
 
         } catch {
-            completion(.failure(.failedFetchBlockDetail))
+            completion(.failure(.onError(error)))
         }
     }
 
 
-    func getRecentBlockNum(completion: @escaping EOSResult<Int>) {
+    func getRecentBlockNum(completion: @escaping EOSResultClosure<Int, EOSManagerError>) {
         if !isSuccess {
             completion(.failure(.failedFetchRecentBlock))
         } else {

@@ -9,14 +9,14 @@
 import Foundation
 
 class EOSBlockListViewModel: EOSBlockListViewable {
-    var title: String {
-        return "EOS Recent Blocks"
-    }
 
     private var blocks = [Int]()
     private let eosManager: EOSManagerable
-
     weak var delegate: EOSViewModelDelegate?
+
+    var title: String {
+        return "EOS Recent Blocks"
+    }
 
     var blockCounts: Int {
         return blocks.count

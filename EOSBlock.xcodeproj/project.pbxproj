@@ -34,6 +34,9 @@
 		D4BD0E7D23261DDC008B9CE6 /* EOSDetailViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E7C23261DDC008B9CE6 /* EOSDetailViewable.swift */; };
 		D4BD0E7F23261E13008B9CE6 /* EOSViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E7E23261E13008B9CE6 /* EOSViewModelDelegate.swift */; };
 		D4BD0E8123262163008B9CE6 /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8023262163008B9CE6 /* AppSession.swift */; };
+		D4BD0E832326428C008B9CE6 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E822326428C008B9CE6 /* DataType.swift */; };
+		D4BD0E85232642D5008B9CE6 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E84232642D5008B9CE6 /* SerializationError.swift */; };
+		D4BD0E8723264ECD008B9CE6 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8623264ECD008B9CE6 /* LoadableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		D4BD0E7C23261DDC008B9CE6 /* EOSDetailViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSDetailViewable.swift; sourceTree = "<group>"; };
 		D4BD0E7E23261E13008B9CE6 /* EOSViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSViewModelDelegate.swift; sourceTree = "<group>"; };
 		D4BD0E8023262163008B9CE6 /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
+		D4BD0E822326428C008B9CE6 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
+		D4BD0E84232642D5008B9CE6 /* SerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
+		D4BD0E8623264ECD008B9CE6 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,7 @@
 				D4BD0E562324AC2B008B9CE6 /* EOSBlockListViewable.swift */,
 				D4BD0E7C23261DDC008B9CE6 /* EOSDetailViewable.swift */,
 				D4BD0E7E23261E13008B9CE6 /* EOSViewModelDelegate.swift */,
+				D4BD0E8623264ECD008B9CE6 /* LoadableView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,9 +255,10 @@
 		D4BD0E6F2324D375008B9CE6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D4BD0E822326428C008B9CE6 /* DataType.swift */,
+				D4BD0E722324D6E8008B9CE6 /* Protocols */,
 				D4BD0E702324D418008B9CE6 /* Mock Objects */,
 				D4BD0E712324D6D9008B9CE6 /* Errors */,
-				D4BD0E722324D6E8008B9CE6 /* Protocols */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
+				D4BD0E84232642D5008B9CE6 /* SerializationError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -422,11 +431,14 @@
 			files = (
 				D4BD0E7F23261E13008B9CE6 /* EOSViewModelDelegate.swift in Sources */,
 				D4BD0E792325E8A1008B9CE6 /* EOSBlockDetailController.swift in Sources */,
+				D4BD0E85232642D5008B9CE6 /* SerializationError.swift in Sources */,
 				D4BD0E5C2324B6D4008B9CE6 /* EOSActivityView.swift in Sources */,
 				D4BD0E692324C36E008B9CE6 /* UITableView+Extensions.swift in Sources */,
 				D4BD0E642324C263008B9CE6 /* Identifiable.swift in Sources */,
 				D4BD0E552324AB11008B9CE6 /* EOSManagerError.swift in Sources */,
+				D4BD0E8723264ECD008B9CE6 /* LoadableView.swift in Sources */,
 				D4BD0E50232485B9008B9CE6 /* EOSBlockListViewModel.swift in Sources */,
+				D4BD0E832326428C008B9CE6 /* DataType.swift in Sources */,
 				D4BD0E4D23248379008B9CE6 /* UIView+Extensions.swift in Sources */,
 				D4BD0E762325DA7D008B9CE6 /* EOSBlockObj.swift in Sources */,
 				D4BD0E532324A523008B9CE6 /* LoadingStates.swift in Sources */,
