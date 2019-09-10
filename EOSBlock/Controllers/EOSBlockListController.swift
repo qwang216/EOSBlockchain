@@ -13,23 +13,35 @@ class EOSBlockListController: UIViewController, LoaderableView {
     let tableview = UITableView()
     var activityIndicator = EOSActivityView(frame: .zero)
     var viewModel: EOSBlockListViewable?
+    let getBlocksButton = UIButton(type: .system)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel?.title
-        view.addSubviews(tableview, activityIndicator)
+        view.backgroundColor = .white
+        view.addSubviews(getBlocksButton, tableview, activityIndicator)
         refreshController.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         activityIndicator.centerSuperview()
         setupTableView()
-        viewModel?.fetchMostRecentBlocks(20)
+        setupGetBlockButton()
+    }
+
+    func setupGetBlockButton() {
+        getBlocksButton.centerSuperview()
+        getBlocksButton.anchor(size: .init(width: 200, height: 50))
+        getBlocksButton.setTitle("Get 20 Recent Blocks", for: .normal)
+        getBlocksButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+        tableview.isHidden = true
     }
 
     func setupTableView() {
+        tableview.backgroundColor = .white
         tableview.fillToSuperview()
         tableview.register(EOSBlockCell.self)
         tableview.refreshControl = refreshController
         tableview.dataSource = self
         tableview.delegate = self
+        tableview.isHidden = true
     }
 
     @IBAction func handleRefresh() {
@@ -74,6 +86,7 @@ extension EOSBlockListController: EOSViewModelDelegate {
 
     func viewModelUpdated() {
         tableview.reloadData()
+        tableview.isHidden = viewModel?.shouldDisplayItems ?? false ?  false : true
     }
 
 }
