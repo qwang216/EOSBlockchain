@@ -8,6 +8,7 @@
 
 import Foundation
 
-
 typealias JSON = [String: Any]
 typealias EOSResultClosure<T,E: Error> = (Result<T, E>) -> Void
+typealias HTTPHeader = [String: String]
+typealias APIResponse = (data: Data?, response: HTTPURLResponse?, error: Error?)

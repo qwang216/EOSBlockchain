@@ -12,7 +12,11 @@ class AppSession {
     // lazy load
     lazy var eosManager: EOSManagerable = {
         // TODO: DEBUG Flag Check
-        Mock_EOSManager()
+        #if DEBUG
+            return Mock_EOSManager()
+        #else
+            return EOSManager()
+        #endif
     }()
 
 }

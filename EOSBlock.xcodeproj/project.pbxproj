@@ -37,6 +37,17 @@
 		D4BD0E832326428C008B9CE6 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E822326428C008B9CE6 /* DataType.swift */; };
 		D4BD0E85232642D5008B9CE6 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E84232642D5008B9CE6 /* SerializationError.swift */; };
 		D4BD0E8723264ECD008B9CE6 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8623264ECD008B9CE6 /* LoadableView.swift */; };
+		D4BD0E8A23274761008B9CE6 /* APIExecutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8923274761008B9CE6 /* APIExecutable.swift */; };
+		D4BD0E8C23274792008B9CE6 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8B23274792008B9CE6 /* HTTPMethod.swift */; };
+		D4BD0E8E232747AE008B9CE6 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8D232747AE008B9CE6 /* APIError.swift */; };
+		D4BD0E90232748BC008B9CE6 /* APIResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E8F232748BC008B9CE6 /* APIResponseMapper.swift */; };
+		D4BD0E93232749B5008B9CE6 /* DecodableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E92232749B5008B9CE6 /* DecodableObject.swift */; };
+		D4BD0E95232749D9008B9CE6 /* APIDecodableMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E94232749D9008B9CE6 /* APIDecodableMapper.swift */; };
+		D4BD0E9723274A33008B9CE6 /* APIJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E9623274A33008B9CE6 /* APIJSONMapper.swift */; };
+		D4BD0E9923274AB5008B9CE6 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E9823274AB5008B9CE6 /* NetworkConfiguration.swift */; };
+		D4BD0E9E23274CED008B9CE6 /* EOSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E9D23274CED008B9CE6 /* EOSManager.swift */; };
+		D4BD0EA023274D85008B9CE6 /* GetBlockInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0E9F23274D85008B9CE6 /* GetBlockInfo.swift */; };
+		D4BD0EA32327512E008B9CE6 /* PostBlockDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD0EA22327512E008B9CE6 /* PostBlockDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +104,17 @@
 		D4BD0E822326428C008B9CE6 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		D4BD0E84232642D5008B9CE6 /* SerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
 		D4BD0E8623264ECD008B9CE6 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
+		D4BD0E8923274761008B9CE6 /* APIExecutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIExecutable.swift; sourceTree = "<group>"; };
+		D4BD0E8B23274792008B9CE6 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D4BD0E8D232747AE008B9CE6 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D4BD0E8F232748BC008B9CE6 /* APIResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseMapper.swift; sourceTree = "<group>"; };
+		D4BD0E92232749B5008B9CE6 /* DecodableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableObject.swift; sourceTree = "<group>"; };
+		D4BD0E94232749D9008B9CE6 /* APIDecodableMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDecodableMapper.swift; sourceTree = "<group>"; };
+		D4BD0E9623274A33008B9CE6 /* APIJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJSONMapper.swift; sourceTree = "<group>"; };
+		D4BD0E9823274AB5008B9CE6 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		D4BD0E9D23274CED008B9CE6 /* EOSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSManager.swift; sourceTree = "<group>"; };
+		D4BD0E9F23274D85008B9CE6 /* GetBlockInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBlockInfo.swift; sourceTree = "<group>"; };
+		D4BD0EA22327512E008B9CE6 /* PostBlockDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBlockDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,10 +277,11 @@
 		D4BD0E6F2324D375008B9CE6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D4BD0E822326428C008B9CE6 /* DataType.swift */,
-				D4BD0E722324D6E8008B9CE6 /* Protocols */,
-				D4BD0E702324D418008B9CE6 /* Mock Objects */,
-				D4BD0E712324D6D9008B9CE6 /* Errors */,
+				D4BD0E9823274AB5008B9CE6 /* NetworkConfiguration.swift */,
+				D4BD0E9A23274B70008B9CE6 /* Network Data Type */,
+				D4BD0E91232748C8008B9CE6 /* Request Protocol */,
+				D4BD0E9B23274C13008B9CE6 /* Managers */,
+				D4BD0EA123274D90008B9CE6 /* EndPoints */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -270,15 +293,6 @@
 				D4BD0E6D2324D36E008B9CE6 /* Mock_EOSManager.swift */,
 			);
 			path = "Mock Objects";
-			sourceTree = "<group>";
-		};
-		D4BD0E712324D6D9008B9CE6 /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
-				D4BD0E84232642D5008B9CE6 /* SerializationError.swift */,
-			);
-			path = Errors;
 			sourceTree = "<group>";
 		};
 		D4BD0E722324D6E8008B9CE6 /* Protocols */ = {
@@ -296,6 +310,73 @@
 				D4BD0E752325DA7D008B9CE6 /* EOSBlockObj.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D4BD0E91232748C8008B9CE6 /* Request Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E8923274761008B9CE6 /* APIExecutable.swift */,
+				D4BD0E8F232748BC008B9CE6 /* APIResponseMapper.swift */,
+				D4BD0E92232749B5008B9CE6 /* DecodableObject.swift */,
+				D4BD0E94232749D9008B9CE6 /* APIDecodableMapper.swift */,
+				D4BD0E9623274A33008B9CE6 /* APIJSONMapper.swift */,
+			);
+			path = "Request Protocol";
+			sourceTree = "<group>";
+		};
+		D4BD0E9A23274B70008B9CE6 /* Network Data Type */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E822326428C008B9CE6 /* DataType.swift */,
+				D4BD0E8B23274792008B9CE6 /* HTTPMethod.swift */,
+				D4BD0E9C23274C34008B9CE6 /* Errors */,
+			);
+			path = "Network Data Type";
+			sourceTree = "<group>";
+		};
+		D4BD0E9B23274C13008B9CE6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E702324D418008B9CE6 /* Mock Objects */,
+				D4BD0E722324D6E8008B9CE6 /* Protocols */,
+				D4BD0E9D23274CED008B9CE6 /* EOSManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D4BD0E9C23274C34008B9CE6 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E8D232747AE008B9CE6 /* APIError.swift */,
+				D4BD0E542324AB11008B9CE6 /* EOSManagerError.swift */,
+				D4BD0E84232642D5008B9CE6 /* SerializationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		D4BD0EA123274D90008B9CE6 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0EA4232753E5008B9CE6 /* Get */,
+				D4BD0EA5232753EB008B9CE6 /* Post */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		D4BD0EA4232753E5008B9CE6 /* Get */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0E9F23274D85008B9CE6 /* GetBlockInfo.swift */,
+			);
+			path = Get;
+			sourceTree = "<group>";
+		};
+		D4BD0EA5232753EB008B9CE6 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				D4BD0EA22327512E008B9CE6 /* PostBlockDetail.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,9 +512,13 @@
 			files = (
 				D4BD0E7F23261E13008B9CE6 /* EOSViewModelDelegate.swift in Sources */,
 				D4BD0E792325E8A1008B9CE6 /* EOSBlockDetailController.swift in Sources */,
+				D4BD0E8A23274761008B9CE6 /* APIExecutable.swift in Sources */,
 				D4BD0E85232642D5008B9CE6 /* SerializationError.swift in Sources */,
+				D4BD0E95232749D9008B9CE6 /* APIDecodableMapper.swift in Sources */,
 				D4BD0E5C2324B6D4008B9CE6 /* EOSActivityView.swift in Sources */,
 				D4BD0E692324C36E008B9CE6 /* UITableView+Extensions.swift in Sources */,
+				D4BD0EA023274D85008B9CE6 /* GetBlockInfo.swift in Sources */,
+				D4BD0E9723274A33008B9CE6 /* APIJSONMapper.swift in Sources */,
 				D4BD0E642324C263008B9CE6 /* Identifiable.swift in Sources */,
 				D4BD0E552324AB11008B9CE6 /* EOSManagerError.swift in Sources */,
 				D4BD0E8723264ECD008B9CE6 /* LoadableView.swift in Sources */,
@@ -441,16 +526,23 @@
 				D4BD0E832326428C008B9CE6 /* DataType.swift in Sources */,
 				D4BD0E4D23248379008B9CE6 /* UIView+Extensions.swift in Sources */,
 				D4BD0E762325DA7D008B9CE6 /* EOSBlockObj.swift in Sources */,
+				D4BD0E8E232747AE008B9CE6 /* APIError.swift in Sources */,
 				D4BD0E532324A523008B9CE6 /* LoadingStates.swift in Sources */,
 				D4BD0E612324C156008B9CE6 /* EOSBaseCell.swift in Sources */,
 				D4BD0E6B2324C92B008B9CE6 /* UIViewControllers+Extensions.swift in Sources */,
+				D4BD0E9E23274CED008B9CE6 /* EOSManager.swift in Sources */,
 				D4BD0E7D23261DDC008B9CE6 /* EOSDetailViewable.swift in Sources */,
+				D4BD0E9923274AB5008B9CE6 /* NetworkConfiguration.swift in Sources */,
 				D4BD0E672324C29F008B9CE6 /* ReuseableView.swift in Sources */,
+				D4BD0EA32327512E008B9CE6 /* PostBlockDetail.swift in Sources */,
 				D4BD0E2023248030008B9CE6 /* EOSBlockListController.swift in Sources */,
 				D4BD0E6E2324D36E008B9CE6 /* Mock_EOSManager.swift in Sources */,
+				D4BD0E90232748BC008B9CE6 /* APIResponseMapper.swift in Sources */,
 				D4BD0E8123262163008B9CE6 /* AppSession.swift in Sources */,
 				D4BD0E5A2324ACA9008B9CE6 /* EOSManagerable.swift in Sources */,
 				D4BD0E5E2324BFE0008B9CE6 /* EOSBlockCell.swift in Sources */,
+				D4BD0E8C23274792008B9CE6 /* HTTPMethod.swift in Sources */,
+				D4BD0E93232749B5008B9CE6 /* DecodableObject.swift in Sources */,
 				D4BD0E572324AC2B008B9CE6 /* EOSBlockListViewable.swift in Sources */,
 				D4BD0E7B2326177D008B9CE6 /* EOSBlockDetailViewModel.swift in Sources */,
 				D4BD0E1E23248030008B9CE6 /* AppDelegate.swift in Sources */,
