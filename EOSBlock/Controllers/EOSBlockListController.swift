@@ -9,7 +9,7 @@
 import UIKit
 
 class EOSBlockListController: UIViewController, LoaderableView {
-    
+    private let refreshController = UIRefreshControl()
     let tableview = UITableView()
     var activityIndicator = EOSActivityView(frame: .zero)
     var viewModel: EOSBlockListViewable?
@@ -18,6 +18,7 @@ class EOSBlockListController: UIViewController, LoaderableView {
         super.viewDidLoad()
         title = viewModel?.title
         view.addSubviews(tableview, activityIndicator)
+        refreshController.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
         activityIndicator.centerSuperview()
         setupTableView()
         viewModel?.fetchMostRecentBlocks(20)
@@ -26,8 +27,14 @@ class EOSBlockListController: UIViewController, LoaderableView {
     func setupTableView() {
         tableview.fillToSuperview()
         tableview.register(EOSBlockCell.self)
+        tableview.refreshControl = refreshController
         tableview.dataSource = self
         tableview.delegate = self
+    }
+
+    @IBAction func handleRefresh() {
+        refreshController.endRefreshing()
+        viewModel?.fetchMostRecentBlocks(20)
     }
 
 }
