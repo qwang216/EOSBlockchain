@@ -10,12 +10,12 @@ import Foundation
 
 protocol APIJSONMapper {
     static func serializeJSON(_ data: Data) -> Result<JSON, APIError>
-    func mapExecuteRequest(force: Bool, onCompletion: @escaping (Result<JSON, APIError>) -> Void)
+    func mapExecuteRequest(force: Bool, onCompletion: @escaping EOSResultClosure<JSON, APIError>)
 }
 
 extension APIJSONMapper where Self: APIExecutable {
 
-    func mapExecuteRequest(force: Bool = false, onCompletion: @escaping (Result<JSON, APIError>) -> Void) {
+    func mapExecuteRequest(force: Bool = false, onCompletion: @escaping EOSResultClosure<JSON, APIError>) {
         execute { (result) in
             switch result {
             case .success(let data):

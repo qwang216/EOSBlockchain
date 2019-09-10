@@ -15,11 +15,10 @@ protocol APIExecutable: APIResponseMapper {
     var body: JSON? { get }
     var header: HTTPHeader? { get }
     var cacheKey: String? { get }
-    func execute(session: URLSession, completion: @escaping (Result<Data, APIError>) -> Void )
+    func execute(session: URLSession, completion: @escaping EOSResultClosure<Data, APIError>)
 }
 
 extension APIExecutable {
-
 
     var relativePath: String {
         return ""
@@ -49,7 +48,7 @@ extension APIExecutable {
         return nil
     }
 
-    func execute(session: URLSession = .shared, completion: @escaping (Result<Data, APIError>) -> Void ) {
+    func execute(session: URLSession = .shared, completion: @escaping EOSResultClosure<Data, APIError>) {
         guard let url = URL(string: absolutePath) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue

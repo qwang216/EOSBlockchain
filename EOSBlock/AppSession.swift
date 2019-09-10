@@ -11,7 +11,6 @@ import Foundation
 class AppSession {
     // lazy load
     lazy var eosManager: EOSManagerable = {
-        // TODO: DEBUG Flag Check
         #if DEBUG
             return Mock_EOSManager()
         #else

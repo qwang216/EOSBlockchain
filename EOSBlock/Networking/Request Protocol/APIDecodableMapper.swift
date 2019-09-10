@@ -9,12 +9,12 @@
 import Foundation
 
 protocol APIDecodableMapper: DecodableObject {
-    func mapExecuteRequest<T: Decodable>(objectType: T.Type, force: Bool, onCompletion: @escaping (Result<T, APIError>) -> Void)
+    func mapExecuteRequest<T: Decodable>(objectType: T.Type, force: Bool, onCompletion: @escaping EOSResultClosure<T, APIError>)
 }
 
 extension APIDecodableMapper where Self: APIExecutable {
 
-    func mapExecuteRequest<T: Decodable>(objectType: T.Type, force: Bool = false, onCompletion: @escaping (Result<T, APIError>) -> Void) {
+    func mapExecuteRequest<T: Decodable>(objectType: T.Type, force: Bool = false, onCompletion: @escaping EOSResultClosure<T, APIError>) {
         execute { (result) in
             switch result {
             case .success(let data):
