@@ -167,12 +167,12 @@
 			children = (
 				D4BD0E8023262163008B9CE6 /* AppSession.swift */,
 				D4BD0E1D23248030008B9CE6 /* AppDelegate.swift */,
-				D4BD0E772325DA8A008B9CE6 /* Model */,
+				D4BD0E772325DA8A008B9CE6 /* Models */,
 				D4BD0E6F2324D375008B9CE6 /* Networking */,
 				D4BD0E51232485C0008B9CE6 /* View Models */,
 				D4BD0E5F2324BFE4008B9CE6 /* Views */,
 				D4BD0E4B23248355008B9CE6 /* Controllers */,
-				D4BD0E4E23248387008B9CE6 /* Extensions */,
+				D4BD0E4E23248387008B9CE6 /* Helper Functions */,
 				D4BD0E2423248031008B9CE6 /* Assets.xcassets */,
 				D4BD0E2623248031008B9CE6 /* LaunchScreen.storyboard */,
 				D4BD0E2923248031008B9CE6 /* Info.plist */,
@@ -207,14 +207,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		D4BD0E4E23248387008B9CE6 /* Extensions */ = {
+		D4BD0E4E23248387008B9CE6 /* Helper Functions */ = {
 			isa = PBXGroup;
 			children = (
 				D4BD0E4C23248379008B9CE6 /* UIView+Extensions.swift */,
 				D4BD0E682324C36E008B9CE6 /* UITableView+Extensions.swift */,
 				D4BD0E6A2324C92B008B9CE6 /* UIViewControllers+Extensions.swift */,
 			);
-			path = Extensions;
+			path = "Helper Functions";
 			sourceTree = "<group>";
 		};
 		D4BD0E51232485C0008B9CE6 /* View Models */ = {
@@ -303,13 +303,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D4BD0E772325DA8A008B9CE6 /* Model */ = {
+		D4BD0E772325DA8A008B9CE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D4BD0E522324A523008B9CE6 /* LoadingStates.swift */,
 				D4BD0E752325DA7D008B9CE6 /* EOSBlockObj.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D4BD0E91232748C8008B9CE6 /* Request Protocol */ = {
