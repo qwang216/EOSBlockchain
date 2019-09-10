@@ -2,8 +2,10 @@
 
 ### App Demo
   #### EOSBlockListController
-     * On initial app launch, tableview will be hidden until `Get Recent 20 Block` button is pressed
-     * Pull to refresh will fetch the most recent `last_irreversible_block_num` generate 20 block numbers. 
+     * On initial app launch, `Get Recent 20 Block` will fetch recent block and tableview will be hidden 
+       if number of fetched blocks are zero.
+     * Pull to refresh will fetch the most recent `last_irreversible_block_num` number and generate 20 
+        more block numbers. 
   #### EOSBlockDetailController
      * Displays Producer, Producer's Signature, Transactions count, and raw JSON
      * Toggle can switch on and off to show and hide raw JSON contents
